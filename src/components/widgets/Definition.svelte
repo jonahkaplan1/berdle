@@ -15,7 +15,7 @@
 			if (data.ok) {
 				cache.set(word, (await data.json())[0]);
 			} else {
-				// throw new Error(`Failed to fetch definition`);
+				throw new Error(`Failed to fetch definition`);
 			}
 		}
 		return cache.get(word);
