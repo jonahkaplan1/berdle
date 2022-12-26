@@ -31,7 +31,7 @@
 
 	const hash = window.location.hash.slice(1).split("/");
 	const modeVal: GameMode = !isNaN(GameMode[hash[0]])
-		? GameMode.beckymode
+		? GameMode[hash[0]]
 		: parseInt(localStorage.getItem("mode")) || modeData.default;
 	mode.set(modeVal);
 	// If this is a link to a specific word make sure that that is the word

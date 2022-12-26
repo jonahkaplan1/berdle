@@ -30,7 +30,7 @@
 <div class="outer">
 	<div class="settings-top">
 		<h3>settings</h3>
-		<!-- <div
+		<div
 			on:click={() => {
 				if (!state.validHard) {
 					toaster.pop("Game has already violated hard mode");
@@ -41,7 +41,7 @@
 				<span slot="title">Hard Mode</span>
 				<span slot="desc">Any revealed hints must be used in subsequent guesses</span>
 			</Setting>
-		</div> -->
+		</div>
 		<Setting type="switch" bind:value={$settings.dark}>
 			<span slot="title">Dark Theme</span>
 		</Setting>
