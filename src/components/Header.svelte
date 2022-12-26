@@ -38,18 +38,14 @@
 			</GameIcon>
 		{/if}
 	</div>
-	<h1
-		on:click|self={() => {
-			$mode = ($mode + 1) % modeData.modes.length;
-			toaster.pop(modeData.modes[$mode].name);
-		}}
+	<h3
 		on:contextmenu|preventDefault|self={() => {
 			$mode = ($mode - 1 + modeData.modes.length) % modeData.modes.length;
 			toaster.pop(modeData.modes[$mode].name);
 		}}
 	>
-		wordle+
-	</h1>
+		rewordle
+	</h3>
 	<div class="icons">
 		{#if showStats}
 			<GameIcon onClick={() => dispatch("stats")}>
@@ -75,11 +71,14 @@
 
 {#if modeData.modes[$mode].name === 'BECKY MODE'}
 <header>
-	<div>
-		Welcome to {modeData.modes[$mode].name}. Your word is: {solutionWord}
+	<div class="subheader">
+		Your word is: {solutionWord}
+	</div>
+	<div class="subheader-score">
+		Current Score: {beckyScore}
 	</div>
 	
-	<span class="score">Current Score: {beckyScore}</span>
+	<!-- <span class="subheader">Current Score: {beckyScore}</span> -->
 </header>
 {/if}
 
@@ -103,6 +102,16 @@
 		height: 100%;
 		z-index: 1;
 		display: flex;
+	}
+	.subheader {
+		font-size: small;
+		padding-left: 20px;
+		
+	}
+	.subheader-score {
+		font-size: small;
+		padding-left: 20px;
+		padding-right: 10px;
 	}
 	h1 {
 		position: absolute;

@@ -61,15 +61,23 @@
 	let tip = 0;
 	$: if (showSettings && tips) tip = Math.floor(tips.length * Math.random());
 
-	function calcPoints(word, guess) {
+	export function calcPoints(word: string, guess: string) {
 		let newPoints = 0;
-		for (let charIndex = 0; charIndex < 5; ++charIndex) {
-			const char = guess[charIndex]
-			const wordChar = word[charIndex]
-			if (char === wordChar) {
-				newPoints += 2
+		const charArr = word.split("");
+		const result = Array<LetterState>(5).fill("⬛");
+		for (let i = 0; i < word.length; ++i) {
+			if (charArr[i] === guess.charAt(i)) {
+				result[i] = "🟩";
+				charArr[i] = "$";
+				newPoints += 3
+
 			}
-			if (word.includes(char)) {
+		}
+		for (let i = 0; i < word.length; ++i) {
+			const pos = charArr.indexOf(guess[i]);
+			if (result[i] !== "🟩" && pos >= 0) {
+				charArr[pos] = "$";
+				result[i] = "🟨";
 				newPoints += 1
 			}
 		}
@@ -324,7 +332,7 @@
 		/>
 		<Share slot="2" state={game} />
 	</Seperator>
-	<ShareGame wordNumber={game.wordNumber} />
+	<!-- <ShareGame wordNumber={game.wordNumber} /> -->
 	{#if !game.active}
 		<Definition {word} alternates={2} />
 	{:else}

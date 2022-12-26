@@ -7,6 +7,11 @@
 
 	export let state: GameState;
 	const toaster = getContext<Toaster>("toaster");
+	function share() {
+		toaster.pop("Copied");
+		navigator.clipboard.writeText(`${window.location.href}`);
+	}
+	
 
 	$: stats = `${modeData.modes[$mode].name} Wordle+ #${state.wordNumber} ${
 		failed(state) ? "X" : state.guesses
@@ -17,10 +22,7 @@
 </script>
 
 <div
-	on:click={() => {
-		navigator.clipboard.writeText(stats);
-		toaster.pop("Copied");
-	}}
+	on:click={share}
 >
 	share
 	<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">

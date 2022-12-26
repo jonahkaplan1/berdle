@@ -5,8 +5,7 @@
 	export let distribution: ScoreGroups;
 
 	$: max = Object.entries(distribution).reduce((p, c) => {
-		if (!isNaN(Number(c[0]))) return Math.max(c[1], p);
-		return p;
+		return Math.max(c[1], p);
 	}, 1);
 </script>
 
@@ -21,7 +20,7 @@
 					class:this={!game.active && !failed(game)}
 					style="width: {(guess[1] / max) * 100}%;"
 				>
-					{guess[1]}
+					{guess[1] > 0 ? guess[1] : ''}
 				</div>
 			</div>
 	{/each}
@@ -31,7 +30,7 @@
 	.guess {
 		display: grid;
 		place-items: left;
-        min-width: 10%;
+        min-width: 14%;
 	}
 	.container {
 		width: 95%;
@@ -47,7 +46,7 @@
 		gap: 20px;
 	}
 	.bar {
-		min-width: 7%;
+		min-width: 2%;
 		transition: width 0.3s ease-out;
 		background: var(--color-absent);
 		color: white;
