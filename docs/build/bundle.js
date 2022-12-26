@@ -15764,7 +15764,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const gameicon_changes = {};
 
-    			if (dirty & /*$$scope*/ 16384) {
+    			if (dirty & /*$$scope*/ 32768) {
     				gameicon_changes.$$scope = { dirty, ctx };
     			}
 
@@ -15844,14 +15844,14 @@ var app = (function () {
     	return block;
     }
 
-    // (45:2) {#if showStats}
+    // (49:2) {#if showStats}
     function create_if_block_2$2(ctx) {
     	let gameicon;
     	let current;
 
     	gameicon = new GameIcon({
     			props: {
-    				onClick: /*func_2*/ ctx[11],
+    				onClick: /*func_2*/ ctx[12],
     				$$slots: { default: [create_default_slot_1$2] },
     				$$scope: { ctx }
     			},
@@ -15869,7 +15869,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const gameicon_changes = {};
 
-    			if (dirty & /*$$scope*/ 16384) {
+    			if (dirty & /*$$scope*/ 32768) {
     				gameicon_changes.$$scope = { dirty, ctx };
     			}
 
@@ -15893,14 +15893,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$2.name,
     		type: "if",
-    		source: "(45:2) {#if showStats}",
+    		source: "(49:2) {#if showStats}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (46:3) <GameIcon onClick={() => dispatch("stats")}>
+    // (50:3) <GameIcon onClick={() => dispatch("stats")}>
     function create_default_slot_1$2(ctx) {
     	let path;
     	let path_transition;
@@ -15910,7 +15910,7 @@ var app = (function () {
     		c: function create() {
     			path = svg_element("path");
     			attr_dev(path, "d", "M16,11V3H8v6H2v12h20V11H16z M10,5h4v14h-4V5z M4,11h4v8H4V11z M20,19h-4v-6h4V19z");
-    			add_location(path, file$p, 46, 4, 1669);
+    			add_location(path, file$p, 50, 4, 1791);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, path, anchor);
@@ -15942,14 +15942,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$2.name,
     		type: "slot",
-    		source: "(46:3) <GameIcon onClick={() => dispatch(\\\"stats\\\")}>",
+    		source: "(50:3) <GameIcon onClick={() => dispatch(\\\"stats\\\")}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (53:2) <GameIcon onClick={() => dispatch("settings")}>
+    // (57:2) <GameIcon onClick={() => dispatch("settings")}>
     function create_default_slot$4(ctx) {
     	let path;
 
@@ -15957,7 +15957,7 @@ var app = (function () {
     		c: function create() {
     			path = svg_element("path");
     			attr_dev(path, "d", "M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z");
-    			add_location(path, file$p, 53, 3, 1888);
+    			add_location(path, file$p, 57, 3, 2010);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, path, anchor);
@@ -15972,14 +15972,14 @@ var app = (function () {
     		block,
     		id: create_default_slot$4.name,
     		type: "slot",
-    		source: "(53:2) <GameIcon onClick={() => dispatch(\\\"settings\\\")}>",
+    		source: "(57:2) <GameIcon onClick={() => dispatch(\\\"settings\\\")}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (59:1) {#if tutorial}
+    // (63:1) {#if tutorial}
     function create_if_block_1$2(ctx) {
     	let div;
     	let t0;
@@ -15996,9 +15996,9 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "OK";
     			attr_dev(span, "class", "ok");
-    			add_location(span, file$p, 61, 3, 2928);
+    			add_location(span, file$p, 65, 3, 3050);
     			attr_dev(div, "class", "tutorial");
-    			add_location(div, file$p, 59, 2, 2807);
+    			add_location(div, file$p, 63, 2, 2929);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -16007,7 +16007,7 @@ var app = (function () {
     			current = true;
 
     			if (!mounted) {
-    				dispose = listen_dev(div, "click", /*click_handler*/ ctx[13], false, false, false);
+    				dispose = listen_dev(div, "click", /*click_handler_1*/ ctx[14], false, false, false);
     				mounted = true;
     			}
     		},
@@ -16039,14 +16039,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-    		source: "(59:1) {#if tutorial}",
+    		source: "(63:1) {#if tutorial}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (67:0) {#if modeData.modes[$mode].name === 'BECKY MODE'}
+    // (71:0) {#if modeData.modes[$mode].name === 'BECKY MODE'}
     function create_if_block$8(ctx) {
     	let header;
     	let div0;
@@ -16068,11 +16068,11 @@ var app = (function () {
     			t3 = text("Current Score: ");
     			t4 = text(/*beckyScore*/ ctx[3]);
     			attr_dev(div0, "class", "subheader svelte-1q6beeo");
-    			add_location(div0, file$p, 68, 1, 3042);
+    			add_location(div0, file$p, 72, 1, 3164);
     			attr_dev(div1, "class", "subheader-score svelte-1q6beeo");
-    			add_location(div1, file$p, 71, 1, 3106);
+    			add_location(div1, file$p, 75, 1, 3228);
     			attr_dev(header, "class", "svelte-1q6beeo");
-    			add_location(header, file$p, 67, 0, 3032);
+    			add_location(header, file$p, 71, 0, 3154);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, header, anchor);
@@ -16097,7 +16097,7 @@ var app = (function () {
     		block,
     		id: create_if_block$8.name,
     		type: "if",
-    		source: "(67:0) {#if modeData.modes[$mode].name === 'BECKY MODE'}",
+    		source: "(71:0) {#if modeData.modes[$mode].name === 'BECKY MODE'}",
     		ctx
     	});
 
@@ -16136,7 +16136,7 @@ var app = (function () {
 
     	gameicon1 = new GameIcon({
     			props: {
-    				onClick: /*func_3*/ ctx[12],
+    				onClick: /*func_3*/ ctx[13],
     				$$slots: { default: [create_default_slot$4] },
     				$$scope: { ctx }
     			},
@@ -16170,7 +16170,7 @@ var app = (function () {
     			add_location(div0, file$p, 20, 1, 588);
     			add_location(h3, file$p, 35, 1, 1386);
     			attr_dev(div1, "class", "icons svelte-1q6beeo");
-    			add_location(div1, file$p, 43, 1, 1579);
+    			add_location(div1, file$p, 47, 1, 1701);
     			attr_dev(header, "class", "svelte-1q6beeo");
     			add_location(header, file$p, 19, 0, 578);
     		},
@@ -16198,14 +16198,18 @@ var app = (function () {
     			current = true;
 
     			if (!mounted) {
-    				dispose = listen_dev(h3, "contextmenu", self$1(prevent_default(/*contextmenu_handler*/ ctx[10])), false, true, false);
+    				dispose = [
+    					listen_dev(h3, "click", self$1(/*click_handler*/ ctx[10]), false, false, false),
+    					listen_dev(h3, "contextmenu", self$1(prevent_default(/*contextmenu_handler*/ ctx[11])), false, true, false)
+    				];
+
     				mounted = true;
     			}
     		},
     		p: function update(ctx, [dirty]) {
     			const gameicon0_changes = {};
 
-    			if (dirty & /*$$scope*/ 16384) {
+    			if (dirty & /*$$scope*/ 32768) {
     				gameicon0_changes.$$scope = { dirty, ctx };
     			}
 
@@ -16259,7 +16263,7 @@ var app = (function () {
 
     			const gameicon1_changes = {};
 
-    			if (dirty & /*$$scope*/ 16384) {
+    			if (dirty & /*$$scope*/ 32768) {
     				gameicon1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -16329,7 +16333,7 @@ var app = (function () {
     			if (if_block3) if_block3.d(detaching);
     			if (detaching) detach_dev(if_block3_anchor);
     			mounted = false;
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -16402,6 +16406,11 @@ var app = (function () {
     	const func = () => dispatch("tutorial");
     	const func_1 = () => dispatch("reload");
 
+    	const click_handler = () => {
+    		set_store_value(mode, $mode = ($mode + 1) % modeData.modes.length, $mode);
+    		toaster.pop(modeData.modes[$mode].name);
+    	};
+
     	const contextmenu_handler = () => {
     		set_store_value(mode, $mode = ($mode - 1 + modeData.modes.length) % modeData.modes.length, $mode);
     		toaster.pop(modeData.modes[$mode].name);
@@ -16409,7 +16418,7 @@ var app = (function () {
 
     	const func_2 = () => dispatch("stats");
     	const func_3 = () => dispatch("settings");
-    	const click_handler = () => dispatch("closeTutPopUp");
+    	const click_handler_1 = () => dispatch("closeTutPopUp");
 
     	$$self.$$set = $$props => {
     		if ('showStats' in $$props) $$invalidate(1, showStats = $$props.showStats);
@@ -16463,10 +16472,11 @@ var app = (function () {
     		dispatch,
     		func,
     		func_1,
+    		click_handler,
     		contextmenu_handler,
     		func_2,
     		func_3,
-    		click_handler
+    		click_handler_1
     	];
     }
 
