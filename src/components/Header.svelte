@@ -39,6 +39,10 @@
 		{/if}
 	</div>
 	<h3
+		on:click|self={() => {
+			$mode = ($mode + 1) % modeData.modes.length;
+			toaster.pop(modeData.modes[$mode].name);
+		}}
 		on:contextmenu|preventDefault|self={() => {
 			$mode = ($mode - 1 + modeData.modes.length) % modeData.modes.length;
 			toaster.pop(modeData.modes[$mode].name);
