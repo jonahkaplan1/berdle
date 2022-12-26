@@ -48,7 +48,8 @@
 	// implement transition delay on keys
 	const delay = DELAY_INCREMENT * ROWS + 800;
 
-	let showTutorial = $settings.tutorial === 3;
+	// let showTutorial = $settings.tutorial === 3;
+	let showTutorial = false;
 	let showSettings = false;
 	let showStats = false;
 	let showRefresh = false;

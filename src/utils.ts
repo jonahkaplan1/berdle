@@ -184,7 +184,7 @@ export function newSeed(mode: GameMode) {
 }
 
 export const modeData: ModeData = {
-	default: GameMode.daily,
+	default: GameMode.beckymode,
 	modes: [
 		{
 			name: "Daily",

@@ -45,3 +45,6 @@ Have fun :)
 - Add a case for that mode in the newSeed function in `utils.ts`
 - Add a ModeData object to the modeData modes array in `utils.ts` 
 </details>
+
+
+https://sveltesaas.com/articles/sveltekit-github-pages-guide/
