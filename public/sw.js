@@ -29,7 +29,12 @@ self.addEventListener("fetch", e => {
 		const response = await fetch(e.request);
 		const cache = await caches.open("defs");
 		log("Caching definition");
-		cache.put(e.request, response.clone());
+		try {
+			cache.put(e.request, response.clone());
+		} catch {
+			log("failed to cache put");
+			return null;
+		}
 		return response;
 	})());
 });
